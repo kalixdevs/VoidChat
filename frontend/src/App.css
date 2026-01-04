@@ -1,0 +1,139 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 32px;
+  width: 100%;
+}
+
+/* Modern Button Styles */
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+  background: rgba(108, 117, 125, 0.9);
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+  background: rgba(84, 91, 98, 0.95);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(108, 117, 125, 0.3);
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  color: white;
+}
+
+.btn-danger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(220, 53, 69, 0.4);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Modern Input Styles */
+.input {
+  width: 100%;
+  padding: 14px 20px;
+  border: 2px solid rgba(102, 126, 234, 0.2);
+  border-radius: 12px;
+  font-size: 15px;
+  margin-bottom: 16px;
+  background: #f8f9fa;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+  transform: translateY(-1px);
+}
+
+.input::placeholder {
+  color: #999;
+}
+
+/* Modern Card Styles */
+.card {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  margin: 0 0 20px 0;
+  color: #1a1a1a;
+  font-size: 24px;
+  font-weight: 600;
+}
